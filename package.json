@@ -1,0 +1,23 @@
+{
+  "name": "buyerfriendly",
+  "version": "1.0.0",
+  "description": "Online shopping app where you could find trending clothe collections",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunil-karpe/e-commerce.git"
+  },
+  "author": "sunilk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunil-karpe/e-commerce/issues"
+  },
+  "homepage": "https://github.com/sunil-karpe/e-commerce#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1"
+  }
+}
