@@ -38,7 +38,7 @@ const Logout = () => {
 
         <Container>
 
-            <Title>You are successfully logout</Title>
+            {/* <Title>You are successfully logout</Title> */}
 
             <Login />
 

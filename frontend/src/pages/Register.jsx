@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Navbar from "../components/Navbar"
 
 const Container=styled.div`
  
@@ -49,6 +50,8 @@ const Agreement=styled.p`
 
 const Register = () => {
   return (
+    <div>
+  <Navbar/>
     <Container >
         <Wrapper>
             <Title>CREATE A NEW ACCOUNT</Title>
@@ -66,6 +69,8 @@ const Register = () => {
             <Button>CREATE</Button>
         </Wrapper>
     </Container>
+    </div>
+      
   )
 }
 
