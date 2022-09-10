@@ -9,16 +9,24 @@ import { useState, useEffect } from "react"
 import { publicRequest } from "../requestMethods"
 import { addProduct } from "../redux/cartRedux"
 import { useDispatch } from "react-redux"
+import {mobile} from "../responsive"
 
 const Container = styled.div``
 const Wrapper = styled.div`
     padding:50px;
     display:flex;
+    ${mobile({ flexDirection:'column'})};
+
 `
+
 const ImgContainer = styled.div`
-    flex:1;
+    // flex:1;
+    ${mobile({ width:'100vw',marginBottom:'10vh'})};
+
 `
-const Img = styled.img``
+const Img = styled.img`
+${mobile({ width:'80%'})};
+`
 const InfoContainer = styled.div`
     flex:1;
     padding:0px 50px;

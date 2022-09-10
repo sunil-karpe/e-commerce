@@ -20,10 +20,12 @@ const Info = styled.div`
 `
 
 const Container = styled.div`
-    flex:1;
+    // flex:1;
+    width:25%;
     margin-left:20px;
     margin-bottom:20px;
     min-width:280px;
+    // max-width:280px;
     height:350px;
     display:flex;
  

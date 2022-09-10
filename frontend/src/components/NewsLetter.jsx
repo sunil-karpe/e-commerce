@@ -12,7 +12,7 @@ const Container=styled.div`
     ${mobile({height:"auto",paddingBottom:"20px"})};
 `
 const Title=styled.h1`
-    font-size:70px;
+    font-size:50px;
     font-weight:500;
     margin-bottom:40px;
     ${mobile({textAlign:"center"})};
@@ -51,7 +51,7 @@ const Button=styled.button`
 const NewsLetter = () => {
   return (
     <Container>
-        <Title>Quick updates</Title>
+        <Title>Contact Us</Title>
         <Description>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe cumque optio fugit a aspernatur! Commodi asperiores laudantium repudiandae rerum error.</Description>
         <InputContainer>
             <Input placeholder="Your Email" />

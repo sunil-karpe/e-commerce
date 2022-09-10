@@ -1,13 +1,16 @@
 
 import { Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Twitter } from "@material-ui/icons";
 import styled from "styled-components";
+import {mobile} from "../responsive"
 
 const Container = styled.div`
   
     display:flex;
     height:40vh;
     justify-content:space-between;
-    flex-wrap:wrap;
+    // flex-wrap:wrap;
+    flex-direction:row;
+    ${mobile({flexDirection:'column'})};
     
 `
 const Left = styled.div`
@@ -21,6 +24,7 @@ const Logo = styled.h1``
 
 const Desc = styled.p`
     margin:20px 0px;
+    text-wrap:wrap;
 `
 
 const SocialContainer = styled.div`
@@ -86,7 +90,7 @@ const Footer = () => {
     return (
         <Container>
             <Left>
-                <Logo>Kharido</Logo>
+                <Logo>Buyerfriendly</Logo>
                 <Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus expedita incidunt sint maxime mollitia provident consectetur magni voluptates excepturi molestias!</Desc>
                 <SocialContainer>
 
@@ -124,7 +128,7 @@ const Footer = () => {
 
                 <ContactItem><Room style={{marginRight:"10px"}}/> 745 Baker street London 98345</ContactItem>
                 <ContactItem><Phone style={{marginRight:"10px"}}/> +1 345 345 643</ContactItem>
-                <ContactItem><MailOutline style={{marginRight:"10px"}}/> connect@kharido.com</ContactItem>
+                <ContactItem><MailOutline style={{marginRight:"10px"}}/> connect@buyerfriendly.com</ContactItem>
             </Right>
         </Container>
     )

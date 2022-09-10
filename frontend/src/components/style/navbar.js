@@ -4,15 +4,22 @@ import styled from "styled-components"
 export const Container = styled.div`
     height:60px;
     //background-color:grey;
-     ${mobile({})};
+    position:sticky;
+    top:0;
+    background-color:#fff;
+    box-shadow:1px 1px 1px lightgray;
+    z-index:1000;
+    width:100vw;
+
    
 `
 export const Wrapper = styled.div`
     padding:5px 20px;
     display:flex;
     align-items:center;
+    
     justify-content:space-between;
-    ${mobile({ padding: "10px" })};
+    ${mobile({ padding: "10px"})};
 
 `
 
@@ -21,6 +28,7 @@ export const Left = styled.div`
     display:flex;
     flex:1;
     align-items:center;
+    ${mobile({ display:'none'})};
 
 `
 export const Language = styled.span`
@@ -35,14 +43,13 @@ export const SearchContainer = styled.div`
     align-items:center;
     margin-left:25px;
     padding:5px;
-    ${mobile({ marginLeft: "0px" })};
+    
 
 `
 
 export const Input = styled.input`
     border:none;
     background-color:transparent;
-    ${mobile({ width: "20vw" })};
     outline:none;
 
 `
@@ -62,7 +69,9 @@ export const Logo = styled.h2`
 export const Center = styled.div`
    
     flex:1;
-    text-align:center;
+    text-align:center; 
+   
+
 `
 export const Right = styled.div`
     
@@ -70,7 +79,7 @@ export const Right = styled.div`
     display:flex;
     align-items:center;
     justify-content:flex-end;
-    ${mobile({ justifyContent: "flex-start", flex: "2" })};
+    
 
     
 

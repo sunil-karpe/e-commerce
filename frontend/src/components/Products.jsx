@@ -9,8 +9,11 @@ const Container = styled.div`
     padding:20px;
     display:flex;
     flex-wrap:wrap;
+    justify-content:center;
 
 `
+
+
 
 const Products = ({ cat, sort, filter }) => {
 
@@ -64,6 +67,8 @@ const Products = ({ cat, sort, filter }) => {
 
   return (
     <Container>
+
+      
 
       {filteredProducts.map((item, i = 0) => {
 
