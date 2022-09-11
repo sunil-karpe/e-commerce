@@ -4,21 +4,15 @@ import { mobile } from "../responsive"
 
 const Container = styled.div`
 // background-color:green;
-    width:15%;
-    padding:10px 12px;
-    border: 1px solid #cce7d0;
-    min-width:250px;
-    border-radius:25px;
-    cursor:pointer;
-    // box-shadow:20px 20px 30px rgba(0,0,0,0.02);
-    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition:0.2s ease;
+${mobile({width:"45vw",border:"0.5px solid grey" })};
 
     &:hover {
         box-shadow:20px 20px 30px rgba(0,0,0,0.06);
-        border: 1px solid teal;
+        // border: 0.01px solid teal;
+        box-shadow:2px 2px 2px grey;
         
     }
+
 
 `
 
@@ -26,14 +20,14 @@ const Img = styled.img`
 height:40vh;
     width:100%;
     object-fit:cover;
-    border-radius:20px;
+    // border-radius:20px;
 
     
 `
 
 const Desc = styled.div`
     text-align:start;
-    padding:10px 0;
+    padding:2px 10px;
 `
 
 const Span = styled.span`
@@ -42,7 +36,8 @@ const Span = styled.span`
 
 const Title = styled.h5`
 
-    padding-top:8px;
+    padding-top:2px;
+    margin:0px;
     color:#1a1a1a;
     font-size:14px;
 
@@ -53,20 +48,21 @@ const Price = styled.h4`
 
 
 
-const FeatureItem = () => {
+const FeatureItem = ({item}) => {
     return (
         <Container>
-            <Img src="https://img.freepik.com/free-photo/fashion-men-accessories-new-trendy-blue-jeans_1357-154.jpg?size=626&ext=jpg&ga=GA1.2.1324430802.1656413860" />
+            {/* <Img src="https://assets.myntassets.com/f_webp,fl_progressive/h_960,q_80,w_720/v1/assets/images/15509228/2021/10/20/fd805bf7-d880-48cf-a5b2-56cc0e21a8d91634723966843IndoEraWomenPinkYokeDesignRegularKurtawithPalazzosDupatta1.jpg" /> */}
+            <Img src={item.img}/>
 
             <Desc>
                 <Span>Men</Span>
                 <Title>Peter England</Title>
                 <Span>
+                    {/* <Star style={{color:"#f4b400"}}/>
                     <Star style={{color:"#f4b400"}}/>
                     <Star style={{color:"#f4b400"}}/>
                     <Star style={{color:"#f4b400"}}/>
-                    <Star style={{color:"#f4b400"}}/>
-                    <Star />
+                    <Star /> */}
                 </Span>
 
                 <Price>$ 56</Price>

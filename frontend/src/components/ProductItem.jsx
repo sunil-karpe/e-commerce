@@ -1,6 +1,7 @@
 import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from "@material-ui/icons"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
+import {mobile} from "../responsive"
 
 const Info = styled.div`
     opacity:0;
@@ -15,24 +16,31 @@ const Info = styled.div`
     justify-content:center;
     transition:all 0.5s ease;
     cursor:pointer;
+    
+  
+
 
 
 `
 
 const Container = styled.div`
     // flex:1;
-    width:25%;
-    margin-left:20px;
-    margin-bottom:20px;
-    min-width:280px;
-    // max-width:280px;
+    width:20%;
+    min-width:180px;
+    max-width:280px;
     height:350px;
     display:flex;
- 
+    ${mobile({ margin:"0px",minWidth:"50vw"})};
+    
     justify-content:center;
     align-items:center;
-    background-color:gray;
+    // background-color:gray;
     position:relative;
+    border:1px solid lightgrey;
+    
+
+
+  
 
     &:hover ${Info}{
         opacity:1;

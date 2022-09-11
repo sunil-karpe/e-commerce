@@ -9,28 +9,40 @@ import { useState, useEffect } from "react"
 import { publicRequest } from "../requestMethods"
 import { addProduct } from "../redux/cartRedux"
 import { useDispatch } from "react-redux"
-import {mobile} from "../responsive"
+import { mobile } from "../responsive"
 
 const Container = styled.div``
 const Wrapper = styled.div`
-    padding:50px;
+    padding:50px 0px;
     display:flex;
-    ${mobile({ flexDirection:'column'})};
+    ${mobile({ flexDirection: 'column',alignItems:'center'})};
+    justify-content:center;
+    // background-color:red;
+    
 
 `
 
 const ImgContainer = styled.div`
-    // flex:1;
-    ${mobile({ width:'100vw',marginBottom:'10vh'})};
+    flex:1;
+    // background-color:yellow;
+    ${mobile({ width: '100vw', marginBottom: '10vh' })};
+    display:grid;
+    place-items:center;
 
 `
 const Img = styled.img`
-${mobile({ width:'80%'})};
+${mobile({ width: '80%' })};
+width:350px;
+object-fit:contain;
+
 `
 const InfoContainer = styled.div`
+// background-color:green;
+   
     flex:1;
-    padding:0px 50px;
+    padding:10px 50px 0 0;
     margin:0px;
+    ${mobile({ margin:'0px 20px' })};
 `
 const Title = styled.h1`
     margin:0px 0px;
@@ -73,10 +85,10 @@ const FilterSize = styled.select`
 const FilterSizeOption = styled.option``
 
 const AddContainer = styled.div`
-    width:50%;
+    // width:50%;
     display:flex;
-    justify-content:space-between;
-  
+    // justify-content:space-between;
+    column-gap:20px;
 
 `
 
@@ -96,16 +108,20 @@ const Amount = styled.span`
 
 `
 const Button = styled.button`
-    padding:12px;
-    border:1px solid teal;
-    background-color:white;
+    padding:10px;
+    background-color:teal;
     cursor:pointer;
-
-    transition:all 1s ease;
+    color:white;
+    border:none;
+    display:inline-block;
+    ${mobile({ width:'auto' })};
+    transition:all 0.5s ease-out;
 
     &:hover{
         background-color:teal;
         color:white;
+        box-shadow: 2px 2px 2px grey;
+
     }
 `
 
@@ -117,8 +133,8 @@ const Product = () => {
 
     const id = location.pathname.split("/")[2];
     const [product, setProduct] = useState({});
-    const [quantity,setQuantity]=useState(1);
-    const dispatch=useDispatch();
+    const [quantity, setQuantity] = useState(1);
+    const dispatch = useDispatch();
     // console.log(id);
 
     useEffect(() => {
@@ -132,17 +148,17 @@ const Product = () => {
 
     }, [product, id]);
 
-    const handleQuantity=(type)=>{
-        if(type==="desc"){
+    const handleQuantity = (type) => {
+        if (type === "desc") {
 
-           quantity===0 ?setQuantity(0): setQuantity((preQuantity)=>preQuantity-1);
-        }else{
-            setQuantity((preQuantity)=>preQuantity+1);
+            quantity === 0 ? setQuantity(0) : setQuantity((preQuantity) => preQuantity - 1);
+        } else {
+            setQuantity((preQuantity) => preQuantity + 1);
         }
     }
 
-    const handleClick=()=>{
-        dispatch(addProduct({...product,quantity}));
+    const handleClick = () => {
+        dispatch(addProduct({ ...product, quantity }));
     }
 
 
@@ -176,8 +192,8 @@ const Product = () => {
                             <FilterTitle>Size</FilterTitle>
                             <FilterSize>
                                 <FilterSizeOption>{product.size}</FilterSizeOption>
-                                
-                                 {/* {product.color.map((c)=>{
+
+                                {/* {product.color.map((c)=>{
                                 return <FilterColor color={c} key={c}/>
 
                             })} */}
@@ -188,12 +204,20 @@ const Product = () => {
 
                     <AddContainer>
                         <AmountContainer>
-                            <Remove onClick={()=>{handleQuantity("desc")}} />
+                            <Remove onClick={() => { handleQuantity("desc") }} />
                             <Amount>{quantity}</Amount>
-                            <Add onClick={()=>{handleQuantity("asc")}}/>
+                            <Add onClick={() => { handleQuantity("asc") }} />
                         </AmountContainer>
                         <Button onClick={handleClick}>ADD TO CART</Button>
                     </AddContainer>
+
+                    {/* <Desc>Kurta design:
+                        Woven design yoke design
+                        Straight shape
+                        Regular style
+                        Round neck, three-quarter regular sleeves
+                        Calf length with straight hem
+                        Cotton blend machine weave fabric</Desc> */}
 
                 </InfoContainer>
 

@@ -7,6 +7,9 @@ import Footer from "../components/Footer"
 import { useLocation } from "react-router-dom"
 import { useState } from "react";
 
+ 
+
+
 
 const Container = styled.div``
 const Title = styled.h1`
@@ -51,6 +54,8 @@ const ProductList = () => {
 
 
     return (
+
+   
         <Container>
             <Navbar />
             <Announcement />
@@ -85,12 +90,13 @@ const ProductList = () => {
                     </Select>
                 </Filter>
             </FilterContainer>
-            <Products cat={cat} sort={sort} filter={filter} />
+            <Products cat={cat} sort={sort} filter={filter} heading={false}/>
             <NewsLetter />
             <Footer />
 
 
         </Container>
+     
     )
 }
 

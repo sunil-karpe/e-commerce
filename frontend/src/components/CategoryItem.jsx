@@ -7,8 +7,8 @@ import { Link } from "react-router-dom"
 const Container = styled.div`
 width:100%;
 height:80vh;
-
-margin:10px;
+// border:0.1px solid grey;
+// margin:10px;
 position:relative;
 flex:1;
 ${mobile({ marginLeft: "0px" })};
@@ -37,6 +37,7 @@ const Info = styled.div`
 
 const Title = styled.h1`
   color:white;
+  text-shadow:1px 1px 1px grey;
 
 `
 const Button = styled.button`
