@@ -30,7 +30,7 @@ const Container = styled.div`
     max-width:280px;
     height:350px;
     display:flex;
-    ${mobile({ margin:"0px",minWidth:"50vw"})};
+    ${mobile({ margin:"0px",minWidth:"45vw"})};
     
     justify-content:center;
     align-items:center;

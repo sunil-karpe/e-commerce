@@ -12,7 +12,7 @@ const Section = styled.section`
   justify-content:center;
   align-items:center;
 
-  margin-top:20vh;
+  // margin-top:20vh;
   ${mobile({ marginTop: '5vh' })};
   
 
@@ -20,7 +20,7 @@ const Section = styled.section`
 
 const Heading = styled.h2`
   font-size:40px;
-  ${mobile({ display: 'none' })};
+  
 `
 
 const Note = styled.p`
@@ -36,9 +36,10 @@ const Container = styled.div`
     flex-wrap:wrap;
     justify-content:center;
     // background-color:red;
-    
+    margin-bottom:20px;
     column-gap:20px;
     row-gap:10px;
+    ${mobile({ marginTop: '10px', width: "100vw", columnGap: "1px", rowGap: "1px" })};
 
 `
 
@@ -98,7 +99,7 @@ const Products = ({ cat, sort, filter,heading =true}) => {
     <Section>
       {heading&&<Heading>New Arrivals</Heading>}
       
-      {heading&&<Note>Summer Collection New Modern Design</Note>}
+      {heading&&<Note>Explore all new styles to look cool</Note>}
       
 
       <Container>

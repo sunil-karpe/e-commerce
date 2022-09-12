@@ -74,7 +74,7 @@ const FeatureProducts = () => {
   return (
     <Section>
       <Heading>Featured Products</Heading>
-      <Note>Summer Collection New Modern Design</Note>
+      <Note>Summer Collection New Modern Designs</Note>
 
       <FeaturesContainer>
         {/* <FeatureItem />

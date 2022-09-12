@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Navbar from "../components/Navbar"
+import {mobile} from "../responsive"
 
 const Container=styled.div`
  
@@ -15,6 +16,7 @@ const Wrapper=styled.div`
   width:40%;
   background-color:white;
   padding:20px;
+  ${mobile({ width:"75%" })};
 `
 
 const Title=styled.h1`
@@ -40,7 +42,8 @@ const Button=styled.button`
   border:none;
   background-color:teal;
   color:white;
-  padding:15px 20px;
+  padding:10px 20px;
+  ${mobile({ width:"auto" })};
 
 `
 const Agreement=styled.p`

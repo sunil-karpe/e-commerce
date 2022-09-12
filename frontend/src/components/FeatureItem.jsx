@@ -1,10 +1,11 @@
 import { Star } from "@material-ui/icons"
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 import { mobile } from "../responsive"
 
 const Container = styled.div`
 // background-color:green;
-${mobile({width:"45vw",border:"0.5px solid grey" })};
+${mobile({ width: "45vw", border: "0.5px solid grey" })};
 
     &:hover {
         box-shadow:20px 20px 30px rgba(0,0,0,0.06);
@@ -48,11 +49,15 @@ const Price = styled.h4`
 
 
 
-const FeatureItem = ({item}) => {
+const FeatureItem = ({ item }) => {
     return (
         <Container>
             {/* <Img src="https://assets.myntassets.com/f_webp,fl_progressive/h_960,q_80,w_720/v1/assets/images/15509228/2021/10/20/fd805bf7-d880-48cf-a5b2-56cc0e21a8d91634723966843IndoEraWomenPinkYokeDesignRegularKurtawithPalazzosDupatta1.jpg" /> */}
-            <Img src={item.img}/>
+            <Link to={`/product/${item._id}`}>
+
+                <Img src={item.img} />
+
+            </Link>
 
             <Desc>
                 <Span>Men</Span>

@@ -4,6 +4,7 @@ import { login } from "../redux/apiCalls"
 import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 import Navbar from "../components/Navbar"
+import {mobile} from "../responsive"
 
 const Container = styled.div`
  
@@ -19,6 +20,7 @@ const Wrapper = styled.div`
   width:25%;
   background-color:white;
   padding:20px;
+  ${mobile({ width:"75%" })};
 `
 
 const Title = styled.h1`
@@ -44,10 +46,10 @@ const Button = styled.button`
   border:none;
   background-color:teal;
   color:white;
-  padding:15px 20px;
+  padding:12px 20px;
   margin-bottom:10px;
   display:block;
-
+  ${mobile({ width:"auto" })};
   &:disabled{
     cursor:not-allowed;
     

@@ -6,8 +6,8 @@ import { mobile } from "../responsive";
 const Container=styled.div`
     display:flex;
     // justify-content:space-between;
-    margin:25vh 0px;
-    ${mobile({flexDirection:"column"})};
+    margin:10vh 0px;
+    ${mobile({flexDirection:"column",border:'none'})};
     border-top:0.1px solid darkgrey;
     border-bottom:0.1px solid darkgrey;
 
