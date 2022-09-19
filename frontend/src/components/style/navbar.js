@@ -79,6 +79,7 @@ export const Right = styled.div`
     display:flex;
     align-items:center;
     justify-content:flex-end;
+    margin-right:20px;
     
 
     

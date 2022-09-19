@@ -77,12 +77,7 @@ const FeatureProducts = () => {
       <Note>Summer Collection New Modern Designs</Note>
 
       <FeaturesContainer>
-        {/* <FeatureItem />
-            <FeatureItem />
-            <FeatureItem />
-            <FeatureItem />
-            <FeatureItem />
-            <FeatureItem /> */}
+        {products.length===0&&<p>No product found...</p>}
 
 
         {products.map((item, i = 0) => {

@@ -60,8 +60,8 @@ const FeatureItem = ({ item }) => {
             </Link>
 
             <Desc>
-                <Span>Men</Span>
-                <Title>Peter England</Title>
+                <Span>{item.desc}</Span>
+                <Title>{item.title}</Title>
                 <Span>
                     {/* <Star style={{color:"#f4b400"}}/>
                     <Star style={{color:"#f4b400"}}/>
@@ -70,7 +70,7 @@ const FeatureItem = ({ item }) => {
                     <Star /> */}
                 </Span>
 
-                <Price>$ 56</Price>
+                <Price>$ {item.price}</Price>
 
             </Desc>
 

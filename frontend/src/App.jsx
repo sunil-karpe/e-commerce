@@ -27,7 +27,7 @@ function App() {
         <Route path="/cart"  element={<Cart />}/>
         <Route path="/pay"  element={<Pay />}/>
         <Route path="/success"  element={<Success />}/>
-        <Route path="/register"  element={<Register />}/>
+        <Route path="/register"  element={user?<Navigate to="/" replace />:<Register />}/>
         {/* <Route path="/login"  element={<Login />}/> */}
         <Route path="/login"  element={user?<Navigate to="/" replace />:<Login />}/>
         <Route path="/logout"  element={<Logout />}/>

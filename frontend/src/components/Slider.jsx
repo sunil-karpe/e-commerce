@@ -14,7 +14,7 @@ const Container = styled.div`
     display:flex;
     position:relative;
     overflow:hidden; 
-    ${mobile({ display: "none" })};
+     ${mobile({ display: "flex" ,height:"50vh"})};
     
 
 `
@@ -36,6 +36,7 @@ const Arrow = styled.div`
     cursor:pointer;
     opacity:0.5;
     z-index:10;
+    ${mobile({width:"30px",height:"30px"})};
    
 `
 const Wrapper = styled.div`
@@ -48,13 +49,14 @@ const Wrapper = styled.div`
 `
 const Slide = styled.div`
     width:100vw;
-    height:100vh;
+    height:100%;
     display:flex;
     align-items:center;
     justify-content:center;
     flex-direction:row;
     // background-color:#${props => props.bg}
     // background-color:green;
+    ${mobile({ backgroundColor:"none",alignItems:"flex-start", height:"50vh"})};
     
 //    padding:0 500px !important;
     
@@ -66,6 +68,7 @@ const SliderContent = styled.div`
     align-items:center;
     justify-content:center;
     flex-direction:row;
+    ${mobile({ justifyContent:"center", backgroundColor:"#fff",width:"100%",height:"50vh"})};
 
 
 `
@@ -73,10 +76,12 @@ const SliderContent = styled.div`
 const ImgContainer = styled.div` 
     width:500px;
     height:80%;
+    ${mobile({ width:"50vw",height:"40vh",objectFit:"contain" })};
+    
 `
 
 const Img = styled.img` 
-    width:500px;
+    width:100%;
     height:100%;
 `
 
@@ -87,11 +92,13 @@ const InfoContainer = styled.div`
     align-items:center;
     flex-direction:column;
     // background-color:red;
+    ${mobile({ width:"30vw",textAlign:"center" })};
 `
 const Title = styled.h1`
     font-size:50px;
     color:teal;
     margin:0;
+    ${mobile({fontSize:"25px"})};
 
 `
 const Desc = styled.p`
@@ -99,6 +106,7 @@ const Desc = styled.p`
     font-size:20px;
     font-weight:500;
     letter-spacing:3px;
+    ${mobile({fontSize:"18px"})};
 
 `
 const Button = styled.button`
@@ -109,6 +117,7 @@ const Button = styled.button`
     curser:pointer !important;
     border:0.5px solid grey;
     border-radius:10px;
+    ${mobile({fontSize:"12px",padding:"5px"})};
 
 `
 
