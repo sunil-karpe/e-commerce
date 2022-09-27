@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import ProductItem from "./ProductItem"
-import { products as prod } from "../data"
+// import { products as prod } from "../data"
 import { useState, useEffect } from "react"
 import axios from "axios"
 import {mobile} from "../responsive"
@@ -60,7 +60,6 @@ const Products = ({ cat, sort, filter,heading =true}) => {
       try {
 
         const res = await axios.get(cat ? `https://buyerfriendly.herokuapp.com/products?category=${cat}` : "https://buyerfriendly.herokuapp.com/products");
-        console.log(cat);
 
         setProducts(res.data);
 

@@ -63,8 +63,9 @@ const Span=styled.span`
 `
 const InputContainer=styled.div`
 flex:1;
+
 min-width:40%;
-padding:10px 10px 0px 0px;
+margin:10px 10px 0px 0px;
 ${mobile({minWidth:"80%"})}
 `
 

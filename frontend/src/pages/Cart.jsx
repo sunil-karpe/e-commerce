@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { useEffect, useState } from "react"
 import StripeCheckout from "react-stripe-checkout"
 import axios from "axios"
-import { publicRequest } from "../requestMethods"
+// import { publicRequest } from "../requestMethods"
 import { useNavigate } from "react-router"
 import { mobile } from "../responsive"
 import { incrementQuantity, decrementQuantity, removeItem } from "../redux/cartRedux"
@@ -26,34 +26,34 @@ const Message = styled.p`
     margin:0px;
     text-align:center;
 `
-const Top = styled.div`
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-`
-const TopButton = styled.button`
-    padding:10px;
-    font-weight:600;
-    cursor:pointer;
-    flex:1;
-    border:${props => props.type === "filled" && "none"};
-    background-color:${props => props.type === "filled" ? "black" : "white"};
-    color:${props => props.type === "filled" ? "white" : "black"};
+// const Top = styled.div`
+//     display:flex;
+//     align-items:center;
+//     justify-content:space-between;
+// `
+// const TopButton = styled.button`
+//     padding:10px;
+//     font-weight:600;
+//     cursor:pointer;
+//     flex:1;
+//     border:${props => props.type === "filled" && "none"};
+//     background-color:${props => props.type === "filled" ? "black" : "white"};
+//     color:${props => props.type === "filled" ? "white" : "black"};
 
-`
+// `
 
-const TopTexts = styled.div`
-    text-align:center;
-    flex:4;
-`
+// const TopTexts = styled.div`
+//     text-align:center;
+//     flex:4;
+// `
 
-const TopText = styled.span`
-    text-decoration:underline;
-    cursor:pointer;
-    margin:0px 10px;
+// const TopText = styled.span`
+//     text-decoration:underline;
+//     cursor:pointer;
+//     margin:0px 10px;
    
 
-`
+// `
 
 const Bottom = styled.div`
 
@@ -181,14 +181,12 @@ const SummaryItemText = styled.span`
 const SummaryItemPrice = styled.span`
 
 `
-const Button = styled.button`
-    width:100%;
-    padding:10px;
-    background-color:teal;
+// const Button = styled.button`
+//     width:100%;
+//     padding:10px;
+//     background-color:teal;
 
-   
-
-`
+// `
 
 
 
@@ -215,7 +213,6 @@ const Cart = () => {
     const onToken = (token) => {
         setStripeToken(token);
     }
-    console.log(stripeToken);
 
     useEffect(() => {
 
@@ -237,7 +234,7 @@ const Cart = () => {
         }
 
         stripeToken && makePayment()
-    }, [stripeToken])
+    }, [stripeToken,cart.total,history])
 
 
     return (
