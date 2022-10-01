@@ -3,6 +3,7 @@ import FeatureItem from "./FeatureItem";
 import { mobile } from "../responsive"
 import { useEffect,useState } from "react";
 import axios from "axios";
+import SkeletonLoader from "./SkeletonLoader";
 
 const Section = styled.section`
   text-align:center;
@@ -77,7 +78,9 @@ const FeatureProducts = () => {
       <Note>Summer Collection New Modern Designs</Note>
 
       <FeaturesContainer>
-        {products.length===0&&<p>No product found...</p>}
+        {products.length===0&& <SkeletonLoader />}
+
+        {/* <SkeletonLoader /> */}
 
 
         {products.map((item, i = 0) => {
